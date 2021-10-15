@@ -18,5 +18,3 @@ public class SquareRoot {
             System.out.println(calculateSquareRoot(Double.parseDouble(args[0])));
     }
 }
-
-

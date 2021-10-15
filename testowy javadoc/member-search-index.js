@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"ParabolaRoots","l":"getRoots(double, double, double)","u":"getRoots(double,double,double)"},{"p":"<Unnamed>","c":"ParabolaRoots","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"<Unnamed>","c":"ParabolaRoots","l":"ParabolaRoots()","u":"%3Cinit%3E()"}];updateSearchResults();

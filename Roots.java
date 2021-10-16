@@ -12,16 +12,16 @@ public class Roots {
         
         double guess = 1.0;
         do{
-            /*guess = (guess + x/guess)/2.0;*/
+            /* Metoda Newtona na wyliczenie pierwiastka n-tego stopnia */
             guess = (1/n)*((n-1)*guess + x / pow(guess, n-1));
-            /*guess = guess1;*/
-        }while( (pow(guess, n)/x < 1.0-precision) || (pow(guess, n)/x> 1.0+precision));
+        }   /* Sprawdzenie czy wynik mieści się w naszym przedziale precyzji */
+        while( (pow(guess, n)/x < 1.0-precision) || (pow(guess, n)/x> 1.0+precision));
         return guess;
     }
 
     public static void main(String[] args){
-        if (args.length<1)
-            System.out.println("Brak argumentu");
+        if (args.length<2)
+            System.out.println("Brak odpowiedniej ilosci argumentow");
         else
             System.out.println(calculateSquareRoot(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
     }

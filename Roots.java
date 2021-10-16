@@ -1,6 +1,7 @@
 public class Roots {
     public static final double precision = 1.0e-5;
 
+    /* Metoda, która podnosi liczbę do danej potęgi za pomocą rekurencji */
     static double pow(double a, double b) {
         if(b == 0) {
             return 1;

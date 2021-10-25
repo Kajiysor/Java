@@ -6,13 +6,6 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Launch MyFunction",
-      "request": "launch",
-      "mainClass": "MyFunction",
-      "projectName": "Java_51ebc931"
-    },
-    {
-      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}",

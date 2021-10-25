@@ -53,19 +53,19 @@ public abstract class AbstractFunction {
 
     double golden_ratio_min(double a, double b){
         double k = (Math.sqrt(5)-1)/2;
-        double xL = b - k * (b - a);
-        double xR = a + k * (b - a);
+        double x_left = b-k*(b-a);
+        double x_right = a+k*(b-a);
 
         while ( (b-a) > epsilon){
-            if (f(xL) < f(xR)){
-                b = xR;
-                xR = xL;
-                xL = b - k * (b - a);
+            if (f(x_left) < f(x_right)){
+                b = x_right;
+                x_right = x_left;
+                x_left = b-k*(b-a);
             }
             else{
-                a = xL;
-                xL = xR;
-                xR = a + k * (b - a);
+                a = x_left;
+                x_left = x_right;
+                x_right = a+k*(b-a);
             }
         }
         return f((a+b)/2);

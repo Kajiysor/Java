@@ -55,80 +55,104 @@ public class testKolekcje{
     public static void testArrayList() {
         ArrayList<Integer> al = new ArrayList<>();
         System.out.println("Array list: ");
-        testKolekcje.initializeCollection(al);
-        testKolekcje.testFind(al);
-        testKolekcje.testRemove(al);
-        //Kolekcje.testToArray(al);
+         testKolekcje.initializeCollection(al);
+        //testKolekcje.testFind(al);
+        //testKolekcje.testRemove(al);
+        //testKolekcje.testToArray(al);
     }
 
     public static void testVector(){
         Vector<Integer> v = new Vector<>();
         System.out.println("Vector: ");
         testKolekcje.initializeCollection(v);
-        testKolekcje.testFind(v);
-        testKolekcje.testRemove(v);
-        //Kolekcje.testToArray(v);
+        //testKolekcje.testFind(v);
+        //testKolekcje.testRemove(v);
+        //testKolekcje.testToArray(v);
     }
-
+    
     public static void testTreeSet(){
         TreeSet<Integer> ts = new TreeSet<>();
         System.out.println("Tree Set: ");
         testKolekcje.initializeCollection(ts);
-        testKolekcje.testFind(ts);
-        testKolekcje.testRemove(ts);
-        //Kolekcje.testToArray(ts);
+        //testKolekcje.testFind(ts);
+        //testKolekcje.testRemove(ts);
+        //testKolekcje.testToArray(ts);
     }
-
+    
     public static void testHashSet(){
-        HashSet<Integer> hs = new HashSet<>();
-        System.out.println("Hash Set: ");
-        testKolekcje.initializeCollection(hs);
-        testKolekcje.testFind(hs);
-        testKolekcje.testRemove(hs);
-        //Kolekcje.testToArray(hs);
+    HashSet<Integer> hs = new HashSet<>();
+    System.out.println("Hash Set: ");
+    testKolekcje.initializeCollection(hs);
+    //testKolekcje.testFind(hs);
+    //testKolekcje.testRemove(hs);
+    //testKolekcje.testToArray(hs);
     }
 
     public static void testLinkedList(){
         LinkedList<Integer> ll = new LinkedList<>();
         System.out.println("Linked List: ");
         testKolekcje.initializeCollection(ll);
-        testKolekcje.testFind(ll);
-        testKolekcje.testRemove(ll);
-        //Kolekcje.testToArray(ll);
+        //testKolekcje.testFind(ll);
+        //testKolekcje.testRemove(ll);
+        //testKolekcje.testToArray(ll);
     }
 
     public static void testStack(){
         Stack<Integer> s = new Stack<>();
         System.out.println("Stack: ");
         testKolekcje.initializeCollection(s);
-        testKolekcje.testFind(s);
-        testKolekcje.testRemove(s);
-        //Kolekcje.testToArray(s);
+        //testKolekcje.testFind(s);
+        //testKolekcje.testRemove(s);
+        //testKolekcje.testToArray(s);
     }
 
     public static void testPriorityQueue(){
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         System.out.println("Priority Queue: ");
         testKolekcje.initializeCollection(pq);
-        testKolekcje.testFind(pq);
-        testKolekcje.testRemove(pq);
-        //Kolekcje.testToArray(pq);
+        //testKolekcje.testFind(pq);
+        //testKolekcje.testRemove(pq);
+        //testKolekcje.testToArray(pq);
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(10000);
         System.out.println("====================================");
         testKolekcje.testArrayList();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
         testKolekcje.testVector();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
         testKolekcje.testTreeSet();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
         testKolekcje.testHashSet();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
         testKolekcje.testLinkedList();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
         testKolekcje.testStack();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
         testKolekcje.testPriorityQueue();
+        Thread.sleep(5000);
+        System.gc();
+        Thread.sleep(5000);
         System.out.println("====================================");
     }
 }

@@ -1,73 +1,77 @@
+import java.util.*;
+
 public class PQueue<E> {
-    private ArrayQueue<E> [] queues;
-    private int totalSize;
-    private int highestNonEmptyQueue;
-
-    /*
-    * highestNonEmptyQueue is -1 when there are no element in every queue
-    * items of X priority is stored in queues[X]
-    * */
-
-    public PQueue(int highest) {
-        queues = new ArrayQueue[highest + 1];
-        totalSize = 0;
-        highestNonEmptyQueue = -1;
-
-        // init each queue in the queues
-        for (int i = 0; i < queues.length; i++) {
-            queues[i] = new ArrayQueue<E>();
-        }
-
+    class Node{
+        E data;
+        int priority;
     }
 
-    public void add(E element, int priority) {
-        queues[priority].add(element);
-
-        if (highestNonEmptyQueue == -1) {
-            highestNonEmptyQueue = 0;
-        } else if (priority > highestNonEmptyQueue) {
-            highestNonEmptyQueue = priority;
-        }
-
-//        System.out.println(queues[priority].remove());
+    public PQueue(){
+        queue = new LinkedList<>();
     }
 
+    List<Node> queue;
 
-    public E remove() {
-        if (highestNonEmptyQueue == -1) return null;
-
-        // remove the element from the queues[highestNOnEmptyQueue]
-        // if the the highestNOnemptyQueue is 0 and it is empty, set highestNonEmptyQueue to -1
-
-        // if the queue becomes empty after removal
-        // find the next highest queue that have element
-
-        E element = queues[highestNonEmptyQueue].remove();
-        if (highestNonEmptyQueue == 0 && queues[highestNonEmptyQueue].isEmpty()) {
-            highestNonEmptyQueue = -1;
-        } else if (queues[highestNonEmptyQueue].isEmpty()) {
-
-            int i = highestNonEmptyQueue - 1;
-            for (i = highestNonEmptyQueue - 1; i >= 0; i--) {
-                if (queues[i].isEmpty() == false) {
-                    highestNonEmptyQueue = i;
-                    break;
+    public void enqueue(E element, int priority){
+        if (queue.isEmpty()){
+            Node temp = new Node();
+            temp.data = element;
+            temp.priority = priority;
+            queue.add(temp);
+        }
+        else{
+            if (queue.get(0).priority > priority){
+                Node newNode = new Node();
+                newNode.data = element;
+                newNode.priority = priority;
+                queue.add(0, newNode);
+            }
+            else{
+                int i = 0;
+                for(; i<queue.size()-1; i++){
+                    if (priority <= queue.get(i).priority){
+                        break;
+                    }
                 }
+                Node newNode = new Node();
+                newNode.data = element;
+                newNode.priority = priority;
+                queue.add(i+1, newNode);
             }
-            // if reached the end and the end is empty
-            if (i == 0 && queues[0].isEmpty()) {
-                highestNonEmptyQueue = -1;
-            }
-
         }
-
-        return element;
+        return;
+        
     }
 
-
-    public int size() {
-        return totalSize;
+    public E dequeue(){
+        E temp = queue.get(0).data;
+        queue.remove(0);
+        return temp;
     }
 
+    public E peek(){
+        return queue.get(0).data;
+    }
 
+    public void traverse(){
+        for (Node current_node: queue){
+            System.out.println(current_node.data);
+        }
+        return;
+    }
+
+    public static void main(String[] args) {
+        PQueue<String> pq = new PQueue<>();
+        pq.enqueue("Not", 2);
+        pq.enqueue("Page", 1);
+        pq.enqueue("Error", 0);
+        pq.enqueue(":(", 3);
+        pq.enqueue("404", 0);
+        pq.enqueue("Found", 2);
+        pq.traverse();
+        System.out.println("Usunieto element: " + pq.dequeue());
+        pq.traverse();
+        System.out.println("Podgladany element: " + pq.peek());
+    }
 }
+

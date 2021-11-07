@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch PQueue",
+      "request": "launch",
+      "mainClass": "PQueue",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}",

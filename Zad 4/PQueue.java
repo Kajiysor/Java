@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class PQueue<E> {
+public class PQueue<T> {
     class Node{
-        E data;
+        T data;
         int priority;
     }
 
@@ -12,21 +12,21 @@ public class PQueue<E> {
 
     List<Node> queue;
 
-    public void enqueue(E element, int priority){
-        if (queue.isEmpty()){
+    public void add(T element, int priority){ // Suma zlozonosci, a zatem zlozonosc operacji najbardziej zlozonej - O(n)
+        if (queue.isEmpty()){ // Zlozonosc O(1)
             Node temp = new Node();
             temp.data = element;
             temp.priority = priority;
             queue.add(temp);
         }
         else{
-            if (queue.get(0).priority > priority){
+            if (queue.get(0).priority > priority){ // Zlozonosc O(1)
                 Node newNode = new Node();
                 newNode.data = element;
                 newNode.priority = priority;
                 queue.add(0, newNode);
             }
-            else{
+            else{ // Zlozonosc O(n)
                 int i = 0;
                 for(; i<queue.size()-1; i++){
                     if (priority <= queue.get(i).priority){
@@ -43,17 +43,17 @@ public class PQueue<E> {
         
     }
 
-    public E dequeue(){
-        E temp = queue.get(0).data;
+    public T get(){ // Zlozonosc O(1)
+        T temp = queue.get(0).data;
         queue.remove(0);
         return temp;
     }
 
-    public E peek(){
+    public T peek(){ // Zlozonosc O(1)
         return queue.get(0).data;
     }
 
-    public void traverse(){
+    public void traverse(){ // Zlozonosc O(n)
         for (Node current_node: queue){
             System.out.println(current_node.data);
         }
@@ -62,14 +62,14 @@ public class PQueue<E> {
 
     public static void main(String[] args) {
         PQueue<String> pq = new PQueue<>();
-        pq.enqueue("Not", 2);
-        pq.enqueue("Page", 1);
-        pq.enqueue("Error", 0);
-        pq.enqueue(":(", 3);
-        pq.enqueue("404", 0);
-        pq.enqueue("Found", 2);
+        pq.add("Not", 2);
+        pq.add("Page", 1);
+        pq.add("Error", 0);
+        pq.add(":(", 3);
+        pq.add("404", 0);
+        pq.add("Found", 2);
         pq.traverse();
-        System.out.println("Usunieto element: " + pq.dequeue());
+        System.out.println("Usunieto element: " + pq.get());
         pq.traverse();
         System.out.println("Podgladany element: " + pq.peek());
     }

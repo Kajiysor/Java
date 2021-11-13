@@ -27,7 +27,7 @@ class CaesarCipher
 	// Driver code
 	public static void main(String[] args)
 	{
-		String text = "ATTACKATONCE";
+		String text = "ATTACKatONCE";
 		int s = 4;
 		System.out.println("Text : " + text);
 		System.out.println("Shift : " + s);

@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch OutputCesarCipher",
+      "request": "launch",
+      "mainClass": "OutputCesarCipher",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}",

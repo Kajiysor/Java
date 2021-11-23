@@ -5,23 +5,16 @@ import java.io.Writer;
 public class NumberConversion extends Writer {
 
     private Writer writer;
-    private int from_base;
-    private int to_base;
+    private int base;
     private int number;
-    private int read_number;
 
-    public NumberConversion(Writer w, int from_base, int to_base){
+    public NumberConversion(Writer w, int b){
         this.writer = w;
-        this.from_base = from_base;
-        this.to_base = to_base;
-        if (this.from_base < 2 || this.from_base > 10 || this.to_base < 2 || this.to_base > 10){
-            System.out.println("The bases need to be in range [2, 10]");
-            System.exit(-2);
-        }
+        this.base = b;
     }
 
     private char[] convert(int number){
-        return Integer.toString(Integer.parseInt(Integer.toString(number), this.from_base), this.to_base).toCharArray();
+        return Integer.toString(number, this.base).toCharArray();
     }
 
     @Override
@@ -29,27 +22,9 @@ public class NumberConversion extends Writer {
         for (int i = off; i < off+len; i++){
             char c = cbuf[i];
             if (Character.isDigit(c)){
-                read_number = Character.digit(c, from_base);
-                if (read_number < 0 && number != 0){ // Przypadek kiedy zly numer jest w srodku liczby
-                    char[] cNumber = this.convert(number);
-                    this.writer.write(cNumber, 0, cNumber.length);
-                    this.number = 0;
-                    this.writer.write(c);
-                }
-                else if (read_number < 0 && number == 0){ // Przypadek kiedy zly numer jest na poczatku liczby
-                    this.writer.write(c);
-                }
-                else if(i == off+len-1){ // Przypadek kiedy dojdziemy do konca tekstu
-                    number = 10*number + read_number;
-                    char[] cNumber = this.convert(number);
-                    this.writer.write(cNumber, 0, cNumber.length);
-                    this.number = 0;
-                }
-                else{
-                    number = 10*number + read_number; // Przpadek kiedy system liczby sie zgadza
-                }
+                number = 10*number + Character.digit(c, 10);
             }
-            else{ // Przypadek kiedy dojdziemy do nowego wyrazu
+            else{
                 if (number != 0){
                     char[] cNumber = this.convert(number);
                     this.writer.write(cNumber, 0, cNumber.length);
@@ -74,8 +49,8 @@ public class NumberConversion extends Writer {
     }
 
     public static void main(String[] args) throws IOException {
-        String s = "Ala 11210 ma 101 słonia 3310111";
-        NumberConversion nc = new NumberConversion(new PrintWriter(System.out), 2, 10);
+        String s = "Ala 123 cos 12 tralala";
+        NumberConversion nc = new NumberConversion(new PrintWriter(System.out), 2);
         nc.write(s.toCharArray());
         nc.close();
     }

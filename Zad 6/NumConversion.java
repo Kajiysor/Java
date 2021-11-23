@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
 
-public class NumberConversion extends Writer {
+public class NumConversion extends Writer {
 
     private Writer writer;
     private int from_base;
@@ -10,7 +10,7 @@ public class NumberConversion extends Writer {
     private int number;
     private int read_number;
 
-    public NumberConversion(Writer w, int from_base, int to_base){
+    public NumConversion(Writer w, int from_base, int to_base){
         this.writer = w;
         this.from_base = from_base;
         this.to_base = to_base;
@@ -75,7 +75,7 @@ public class NumberConversion extends Writer {
 
     public static void main(String[] args) throws IOException {
         String s = "Ala 11210 ma 101 słonia 3310111";
-        NumberConversion nc = new NumberConversion(new PrintWriter(System.out), 2, 10);
+        NumConversion nc = new NumConversion(new PrintWriter(System.out), 2, 10);
         nc.write(s.toCharArray());
         nc.close();
     }

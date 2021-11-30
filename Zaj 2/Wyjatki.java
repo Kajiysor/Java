@@ -1,11 +1,10 @@
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Wyjatki {
     public static void main(String[] args) throws IOException{
-        String s;
+        //String s;
         //s = args[0];
         //System.out.println(s);
 

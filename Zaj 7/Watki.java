@@ -17,7 +17,6 @@ public class Watki {
                 System.out.println("Czekam zeby wypisac: " + s);
                 wait();
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -51,7 +50,6 @@ public class Watki {
                     try {
                         Thread.sleep(3000);
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                     w1.changeFlag();

@@ -12,7 +12,6 @@ public class Wyjatki {
         try {
             fis = new FileInputStream("mojplik.txt");
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             System.out.println("Niestety nie ma pliku");
             //return;
             System.exit(0);

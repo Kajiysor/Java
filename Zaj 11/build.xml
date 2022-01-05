@@ -1,0 +1,8 @@
+<project name="cwiczenia XML" default="default" basedir=".">
+    <description>
+        build.xml zrobiony na cwiczeniach
+    </description>
+    <target name="default" description="domyslny cel">
+        <jar destfile="cwiczenia-xml.jar" includes="**/*.class, ../en.xml, ../build.xml" basedir="bin"></jar>
+    </target>
+</project>

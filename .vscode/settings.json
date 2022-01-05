@@ -12,6 +12,14 @@
     "Zad 1",
     "Zaj 1",
     "Zad 7",
-    "Zaj 8"
+    "Zaj 8",
+    "Zaj 11"
+  ],
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "Zaj 11/lib/jaxb-api-2.3.1.jar",
+    "Zaj 11/lib/activation-1.1.1.jar",
+    "Zaj 11/lib/jaxb-impl-2.3.1.jar",
+    "Zaj 11/lib/istack-commons-runtime-3.0.7.jar"
   ]
 }

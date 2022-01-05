@@ -117,6 +117,6 @@ public class Swing_z_zaj {
 	}
 
 	public static void main(String[] args) {
-		JFrame f = createFrame();
+		createFrame();
 	}
 }

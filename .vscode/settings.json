@@ -13,7 +13,8 @@
     "Zaj 1",
     "Zad 7",
     "Zaj 8",
-    "Zaj 11"
+    "Zaj 11",
+    "Uczonko"
   ],
   "java.project.referencedLibraries": [
     "lib/**/*.jar",

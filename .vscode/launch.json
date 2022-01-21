@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Deadlock",
+      "request": "launch",
+      "mainClass": "Deadlock",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch JoinExample",
+      "request": "launch",
+      "mainClass": "JoinExample",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch HelloRunnable2",
+      "request": "launch",
+      "mainClass": "HelloRunnable2",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch HelloRunnable",
+      "request": "launch",
+      "mainClass": "HelloRunnable",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch WitamWatek",
+      "request": "launch",
+      "mainClass": "WitamWatek",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch Watki",
+      "request": "launch",
+      "mainClass": "Watki",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch BobBudowniczyProcesu",
+      "request": "launch",
+      "mainClass": "BobBudowniczyProcesu",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch Procesy",
+      "request": "launch",
+      "mainClass": "Procesy",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}",

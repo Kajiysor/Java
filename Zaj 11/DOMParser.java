@@ -17,6 +17,7 @@ public class DOMParser {
         FileInputStream fis = new FileInputStream("en.xml");
         Document doc = builder.parse(fis);
         Node n = doc.getDocumentElement().getChildNodes().item(1);
+        // System.out.println(doc.getDocumentElement().getChildNodes().getLength());
         NodeList nl = n.getChildNodes();
         for(int i = 0; i < nl.getLength(); i++){
             System.out.println(nl.item(i).getNodeName());

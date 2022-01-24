@@ -57,7 +57,7 @@ public class Watki {
             }
         });
         t1.start();
-        //t1.join();
+        // t1.join();
         t2.start();
         t3.start();
     }

@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch JAXBExample",
+      "request": "launch",
+      "mainClass": "JAXBExample",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
       "name": "Launch Deadlock",
       "request": "launch",
       "mainClass": "Deadlock",

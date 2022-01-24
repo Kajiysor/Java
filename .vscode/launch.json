@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch DOMParser",
+      "request": "launch",
+      "mainClass": "DOMParser",
+      "projectName": "Java_b2525cb8"
+    },
+    {
+      "type": "java",
+      "name": "Launch EchoServerCiesla",
+      "request": "launch",
+      "mainClass": "Socketki.EchoServerCiesla",
+      "projectName": "Java_b2525cb8"
+    },
+    {
+      "type": "java",
+      "name": "Launch ChatServer",
+      "request": "launch",
+      "mainClass": "Socketki.ChatServer",
+      "projectName": "Java_b2525cb8"
+    },
+    {
+      "type": "java",
+      "name": "Launch EchoServer",
+      "request": "launch",
+      "mainClass": "pl.edu.uj.javaframe.EchoServer",
+      "projectName": "Java_b2525cb8"
+    },
+    {
+      "type": "java",
       "name": "Launch Deadlock",
       "request": "launch",
       "mainClass": "Deadlock",

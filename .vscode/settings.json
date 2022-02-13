@@ -15,7 +15,8 @@
     "Zaj 8",
     "Zaj 11",
     "Uczonko",
-    "Sprawdzian 2"
+    "Sprawdzian 2",
+    "Sprawdzian 3"
   ],
   "java.project.referencedLibraries": [
     "lib/**/*.jar",

@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SAXExample",
+      "request": "launch",
+      "mainClass": "SAXExample",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch Anagramy",
+      "request": "launch",
+      "mainClass": "Anagramy",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch test_string",
+      "request": "launch",
+      "mainClass": "test_string",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch GFG",
+      "request": "launch",
+      "mainClass": "GFG",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
+      "name": "Launch Anagram",
+      "request": "launch",
+      "mainClass": "Anagram",
+      "projectName": "Java_51ebc931"
+    },
+    {
+      "type": "java",
       "name": "Launch MathServer",
       "request": "launch",
       "mainClass": "MathServer",
